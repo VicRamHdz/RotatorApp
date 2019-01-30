@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:RotatorApp" 
+             x:Class="RotatorApp.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+          <local:RotatorConverter x:Key="RotatorConverter"></local:RotatorConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Orientation="Vertical" VerticalOptions="Center">
+        <!-- Place new controls here -->
+
+        <local:RotatorControl x:Name="RotatorControl" HeightRequest="320"
+        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+
+        <!--<ListView x:Name="lstRotator" 
+                  HeightRequest="150" 
+                  VerticalOptions="FillAndExpand" 
+                  HorizontalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+              <DataTemplate>
+                <ViewCell>
+                    <ContentView Rotation="90" BackgroundColor="#41b5e8" 
+                               VerticalOptions="FillAndExpand" 
+                        RotationX="{Binding RotateX, Converter={StaticResource RotatorConverter}}" 
+                               HeightRequest="{Binding Source={x:Reference Label}, Path=Width}">
+                    <Label x:Name="Label" BackgroundColor="Red" Text="{Binding Title}" 
+                           RotationX="{Binding RotateX}"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+                           HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  />
+                  </ContentView>-->
+                <!--</ViewCell>
+              </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+        
+    </StackLayout>
+</ContentPage>
